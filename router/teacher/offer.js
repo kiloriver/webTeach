@@ -2,10 +2,12 @@
 
 const { EventEmitter } = require('events');
 const logger = require('../../lib/logger').logger('teacher-offer');
-let broadcaster = null;//new EventEmitter();
-function beforeOffer(peerConnection,lesson='broadcast') {
+// let broadcaster = null;//new EventEmitter();
+function beforeOffer(peerConnection,options) {
   logger.debug('broadcaster server | beforeOffer enter ');
-  broadcaster = peerConnection.bc;
+  const broadcaster = options.broadcaster;
+  const lesson = options.broadcaster.lesson;
+  
   const audioTrack = broadcaster.audioTrack = peerConnection.addTransceiver('audio').receiver.track;
   const videoTrack = broadcaster.videoTrack = peerConnection.addTransceiver('video').receiver.track;
   logger.debug('broadcaster server | beforeOffer :broadcaster.emit %s',lesson);
@@ -24,6 +26,5 @@ function beforeOffer(peerConnection,lesson='broadcast') {
 }
 
 module.exports = {
-  beforeOffer,
-  broadcaster
+  beforeOffer
 };

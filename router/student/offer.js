@@ -1,11 +1,12 @@
 'use strict';
 
 //const { broadcaster } = require('../teacher/offer')
-var broadcaster = null;
+//var broadcaster = null;
 const logger = require('../../lib/logger').logger('student-offer');
-function beforeOffer(peerConnection,lesson='broadcast') {
-  logger.debug('viewer server | beforeOffer enter ');
-  broadcaster = peerConnection.bc;
+function beforeOffer(peerConnection,options) {
+  logger.debug('viewer server | beforeOffer enter options:%o',options);
+  const broadcaster = options.broadcaster;
+  const lesson = options.lesson;
 
   const audioTransceiver = peerConnection.addTransceiver('audio');
   const videoTransceiver = peerConnection.addTransceiver('video');
