@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style type="text/css">
+body {
+  font-family: Courier;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1em;
+  background:#fff;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+label > input {
+  margin-left: 1em;
+}
+
+.grid {
+  margin-top: 1em;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%;
+}
+
+.grid video {
+  width: 100vh;
+  height: 80vh;
+  margin: auto 0;
+  background-color: rgb(46, 46, 3);
+}
+
+.grid canvas {
+  margin: auto auto;
+  max-width: 100%;
+}
+</style>
+<meta charset="utf-8">
+<title>XDG Web-live Demo</title>
+<body>
+<h1>XDG</h1>
+<script src="index.js"></script>
+<!-- <script src="../node_modules/socket.io/client-dist/socket.io.js"></script> -->
+<script>window.roomid =102 </script>

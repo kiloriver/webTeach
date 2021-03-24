@@ -1,0 +1,36 @@
+{
+  "name": "webteach",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "live",
+    "video"
+  ],
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "Scope": "github:kevincennis/Scope",
+    "Socket.IO": "lastest",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "browserify-middleware": "^8.1.1",
+    "canvas": "^2.4.1",
+    "color-space": "^1.16.0",
+    "express": "^4.16.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "fluent-ffmpeg-multistream": "^1.0.0",
+    "log4js": "^6.0.0",
+    "node-fetch": "^2.3.0",
+    "socket.io": "^4.0.0",
+    "uuid": "^3.3.2",
+    "wrtc": "^0.4.7",
+    "ws": "latest"
+  },
+  "author": "coldSea",
+  "license": "ISC"
+}
